@@ -38,7 +38,17 @@ int main(int argc, char *argv[])
 	int *array = calloc(n, sizeof(int));
 	fill(array, n, 23);
 
+  fprintf(stderr, "before: ");
+  for (unsigned int i = 0; i < n; i++) {
+    fprintf(stderr, "%d ", array[i]);
+  }
+  fprintf(stderr, "\n");
 	bsort(array, n);
+  fprintf(stderr, "after: ");
+  for (unsigned int i = 0; i < n; i++) {
+    fprintf(stderr, "%d ", array[i]);
+  }
+  fprintf(stderr, "\n");
 	fprintf(stderr, "input %d\n", n);
-	fprintf(stderr, "tcalls %u\n", tcalls);
+	fprintf(stderr, "tcalls %lu\n", tcalls);
 }
