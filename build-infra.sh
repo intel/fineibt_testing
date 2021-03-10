@@ -31,6 +31,6 @@ cd fineibt_glibc
 rm -rf build
 mkdir build
 cd build
-../configure CC=$ROOT/install/llvm-fine/bin/clang --prefix=$ROOT/install/glibc-fine/ --with-clang --disable-werror --disable-float128 --with-lld --with-default-link --disable-multi-arch --enable-bind-now --enable-cet --enable-fineibt --verbose --enable-fixedr11
+../configure CC=$ROOT/install/llvm-fine/bin/clang --prefix=$ROOT/install/glibc-fine/ --with-clang --disable-werror --disable-float128 --with-lld --with-default-link --disable-multi-arch --enable-bind-now --enable-cet --enable-fineibt --verbose
 make -j8
 make install
